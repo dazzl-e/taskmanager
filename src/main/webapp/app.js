@@ -16,10 +16,12 @@ function addTask(event)
 		const taskDiv = document.createElement('div');
 		taskDiv.classList.add("task");
 		
+		
 		const newTask = document.createElement('li');
 		newTask.innerText = taskInput.value;
 		newTask.classList.add("task-item");
 		taskDiv.appendChild(newTask);
+		
 		
 		const deletebutton = document.createElement('button');
 		deletebutton.innerHTML = '<i class="fas fa-trash"></i>'
