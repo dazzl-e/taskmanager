@@ -7,13 +7,11 @@
 			
 <link rel="stylesheet" href="../style.css">				
 				
-				
-				
-				
-				<%
-																								ShowTasks print = new ShowTasks(getServletContext());
-																										print.printlist(request, response);
-																								%>
+<%
+		ShowTasks print = new ShowTasks(getServletContext());
+		print.printlist(request, response);
+
+%>
 					
 				
 			
