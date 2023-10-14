@@ -35,7 +35,7 @@ function addTask(event)
 		
     	
     	
-    	http.open("POST", "http://ec2-3-145-37-167.us-east-2.compute.amazonaws.com/taskmanager/newTask.jsp", true);
+    	http.open("POST", "http://ec2-3-145-37-167.us-east-2.compute.amazonaws.com:8080/taskmanager/newTask.jsp", true);
     	
     	http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     	var params = "addTask=" + taskInput.value; 
@@ -65,7 +65,7 @@ function remove(e)
 		taskList.addEventListener("transitionend", function(){
 			var http = new XMLHttpRequest();
 			
-	    	http.open("POST", "http://ec2-3-145-37-167.us-east-2.compute.amazonaws.com/taskmanager/deleteTask.jsp", true);
+	    	http.open("POST", "http://ec2-3-145-37-167.us-east-2.compute.amazonaws.com:8080/taskmanager/deleteTask.jsp", true);
 	    	
 	    	http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	    	var params = "taskToDelete=" + task.previousElementSibling.innerText; 
